@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <h1 id="titulo">Manejo dom con JavaScript</h1>
+  <button onclick="mostrar()">Mostrar</button>
+  <br/>
+  <img id="imagen" src="http://globalmentoring.com.mx/imagenes/javascript.png" />
+  <script>
+    function mostrar() {
+      // innerHTML podemos cambiar textos al llamar la función mostrar
+      document.getElementById('titulo').innerHTML = 'Nuevo título';
+
+      // Cambio de atributos en html, aquí cambiamos el valor del atributo de src
+      document.getElementById('imagen').src = 'http://globalmentoring.com.mx/imagenes/html5.png';
+    }
+  </script>
+</body>
+</html>

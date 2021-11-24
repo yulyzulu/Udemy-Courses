@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM con JavaScript</title>
+</head>
+<body>
+  <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+  <p id="parrafo">Saludos</p>
+  <script>
+    // document.getElementById('cabecero') nos retorna el objeto, para acceder al texto hay que poner innerHTML
+    console.log(document.getElementById('cabecero')); // <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+    let cabecero = document.getElementById('cabecero').innerHTML;
+    console.log(cabecero); // // Ejemplo DOM con JavaScript
+    let parrafo = document.getElementById('parrafo').innerHTML;
+    console.log(parrafo); // Saludos
+    console.log(document.getElementById('parrafo')); // <p id="parrafo">Saludos</p>
+  </script>
+</body>
+</html>

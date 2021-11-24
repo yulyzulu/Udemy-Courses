@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document.write()</title>
+</head>
+<body>
+  <h1>Manejo dom con JavaScript</h1>
+  <button onclick="mostrar()">Mostrar</button>
+  <script>
+    // document.write() puede sobreescribir todo el html. Después de cargado todo el documento html.
+    document.write('Saludos desde JavaScript');
+    function mostrar() {
+      //Al llamar la función mostrar, el navegador sobreescribe todo el html por Adiós
+      document.write('Adiós');
+    }
+  </script>
+</body>
+</html>

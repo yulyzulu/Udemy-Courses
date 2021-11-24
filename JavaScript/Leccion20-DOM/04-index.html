@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM con JavaScript</title>
+  <style>
+    .azul{
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="azul">Ejemplo DOM con JavaScript</h1>
+  <p class="azul">Saludos</p>
+  <p class="azul">Otro parrafo</p>
+  <script>
+    //getElementsByClassName => Devuelve un array de elementos que contienen la clase azul
+    let elementos = document.getElementsByClassName('azul');
+    console.log(`Número elementos con la clase azul: ${elementos.length}`); // Número elementos con la clase azul: 3
+    for (let elemento of elementos) {
+      console.log(`${elemento.innerHTML}`);
+    }
+    // Ejemplo DOM con JavaScript
+    // Saludos
+    // Otro parrafo
+
+  </script>
+</body>
+</html>

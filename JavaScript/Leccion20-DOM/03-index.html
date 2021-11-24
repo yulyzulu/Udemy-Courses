@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM con JavaScript</title>
+</head>
+<body>
+  <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+  <p>Saludos</p>
+  <p>Otro parrafo</p>
+  <script>
+    //getElementsByTagName => Devuelve un array de elementos que contienen la etiqueta p
+    let parrafos = document.getElementsByTagName('p');
+    console.log(`Número de parrafos: ${parrafos.length}`); // Número de parrafos: 2
+    for (let i = 0; i < parrafos.length; i++) {
+      console.log(`Indice: ${i} - ${parrafos[i].innerHTML}`);
+    }
+    // Indice: 0 - Saludos
+    // Indice: 1 - Otro
+
+    let cabecera = document.getElementsByTagName('h1');
+    console.log(`Número de títulos: ${cabecera.length}`); // Número de títulos: 1
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM con JavaScript</title>
+</head>
+<body>
+  <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+  <p id="parrafo">Saludos</p>
+  <script>
+    let cabecero = document.getElementById('cabecero');
+    console.log(cabecero.innerHTML); // Ejemplo DOM con JavaScript
+    let parrafo = document.getElementById('parrafo');
+    console.log(parrafo.innerHTML); // Saludos
+    // Con innerHTML también podemos modificar el valor del objeto
+    parrafo.innerHTML = 'Nuevo valor del parrafo';
+    console.log(parrafo.innerHTML); // Nuevo valor del parrafo
+    cabecero.innerHTML = 'Nuevo título modificado con innerHTML';
+    console.log(cabecero.innerHTML); // Nuevo título modificado con innerHTML
+  </script>
+</body>
+</html>

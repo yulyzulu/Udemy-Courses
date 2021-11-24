@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Eventos</title>
+</head>
+<body onload="entrar()">
+  <h1 id="titulo">Manejo DOM con JavaScript</h1>
+  <div id="mostrar"></div>
+  <br/>
+  <script>
+    // onload => Este método se ejecuta cuando se carga la página web
+    // También nos puede servir para verificar ciertas cosas cuando estamos cargando nuestra página web.
+    // Por ejemplo podríamos revisar el idioma que está utilizando nuestro usuario o por ejemplo, sí tiene habilitado el concepto de cookies
+    // Las Cookies nos permiten almacenar cierta información en el navegador web. Llave valor
+    
+    function entrar() {
+      alert('Entrando a la página web');
+      let texto = '';
+      // Para ver sí estan habilitadas las cookies podemos hacer lo siguiente
+      if (navigator.cookieEnabled) {
+        texto = 'Las Cookies están habilitadas';
+      } else {
+        texto = 'Las Cookies están inhabilitadas';
+      }
+      document.getElementById('mostrar').innerHTML = texto;
+    }
+  </script>
+</body>
+</html>

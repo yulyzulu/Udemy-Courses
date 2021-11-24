@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Eventos</title>
+</head>
+<body>
+  <h1 id="titulo" onmousedown="rojo(this)" onmouseup="azul(this)" onclick="verde(this)">Manejo DOM con JavaScript</h1>
+  <br/>
+  <script>
+    // onmousedown => Cuando damos click sobre un elemento y mantenemos el click sostenido
+    // onmouseup => Cuando soltamos el click sobre cierto elemento
+    // onclick => Cuando damos click sobre un elemento
+    // Se ejecutan en su orden el evento onmousedown, onmouseup y onclick. El evento onmouseup no se percibe debido a qué es muy rápido el cambio.
+    function rojo(elemento) {
+      console.log('Evento onmousedown cambió a rojo')
+      elemento.style.color = 'red';
+    }
+    function azul(elemento) {
+      console.log('Evento onmouseup cambió a azul');
+      elemento.style.color = 'blue';
+    }
+    function verde(elemento) {
+      console.log('Evento onclick cambió a verde');
+      elemento.style.color = 'green';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Eventos</title>
+</head>
+<body>
+  <h1 id="titulo">Manejo DOM con JavaScript</h1>
+  <div id="mostrar"></div>
+  <br/>
+  <script>
+    // Con el método onclick podemos referenciar la función que queremos que se ejecute, cuando se de click en el 
+    // todo lo podemos modificar desde JS
+    document.getElementById('titulo').onclick = cambiarTexto;
+    function cambiarTexto() {
+        document.getElementById('mostrar').innerHTML = 'Nuevo Contenido';
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Eventos</title>
+</head>
+<body>
+  <h1 id="titulo">Manejo DOM con JavaScript</h1>
+  <br/>
+  Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)" />
+  <br /><br />
+  Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)" />
+
+  <script>
+    // onfocus => cuando damos click sobre una caja de texto, vamos a capturar el evento onfocus
+    // onblur => cuando soltamos o quitamos el foco de la caja de texto
+
+    function cambiar(elementoInput) {
+      // Se ejecuta mientras estamos haciendo algo en la caja
+      elementoInput.style.background = 'yellow';
+    }
+    function regresar(elementoInput) {
+      // Se ejecuta cuando damos click afuera de la caja
+      elementoInput.style.background = 'white';
+    }
+  </script>
+</body>
+</html>

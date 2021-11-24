@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Eventos</title>
+</head>
+<body>
+  <h1 id="titulo">Manejo DOM con JavaScript</h1>
+  <br/>
+  Nombre: <input type="text" id="nombre" />
+  <br /><br />
+  Apellido: <input type="text" id="apellido" />
+
+  <script>
+    // Hasta ahora hemos configurado los eventos desde el html, pero también lo podemos hacer desde JavaScript.
+    // addEventListener es el método que vamos a utilizar para agregar uno o más eventos al componente que estamos recuperando.
+    // Cuando llamamos los elementos desde addEventListener llamamos al evento por su nombre, quitamos on. Y se llama la referencia (por lo tanto no lleva paréntensis) a la función que queremos que se ejecute.
+    document.getElementById('nombre').addEventListener('focus', cambiar);
+    document.getElementById('nombre').addEventListener('blur', regresar);
+    document.getElementById('apellido').addEventListener('focus', cambiar);
+    document.getElementById('apellido').addEventListener('blur', regresar);
+    function cambiar(evento){
+      // Opcionalmente podemos mandar el evento. Pero aquí nos conviene para saber qué evento, lanzó este evento
+      // Así que el evento focus, podemos recuperarlo con evento.target
+      let componente = evento.target; // Nos devuelve el elemento inputText como sí hubieramos utilizado el operador this
+      componente.style.background = 'yellow';
+    }
+
+    function regresar(evento) {
+      evento.target.style.background = 'white'
+    }
+  </script>
+</body>
+</html>

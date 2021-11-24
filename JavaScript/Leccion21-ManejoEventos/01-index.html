@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Eventos</title>
+</head>
+<body>
+  <!-- Manejo de eventos => onclick es un método de JS que permíte ejecutar la función que se llama o se declara al dar click en el objeto tag -->
+  <h1 onclick="cambiarTexto(this)">Manejo DOM con JavaScript</h1>
+  <br/>
+  <script>
+    function cambiarTexto(titulo) {
+      console.log(titulo); // En consola trae todo el objeto => <h1 onclick="cambiarTexto(this)">Manejo DOM con JavaScript</h1>
+      console.log(titulo.innerHTML); // Manejo DOM con JavaScript
+      titulo.innerHTML = 'Nuevo Título';
+      console.log(titulo.innerHTML); // Nuevo Título
+    }
+  </script>
+</body>
+</html>

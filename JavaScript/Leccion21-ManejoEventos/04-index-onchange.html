@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Eventos</title>
+</head>
+<body>
+  <h1 id="titulo">Manejo DOM con JavaScript</h1>
+  <br/>
+  Nombre: <input type="text" onchange="convertir(this)" />
+  <script>
+    // onchange => Este evento normalmente lo vamos a quere capturar cuando modificamos los valores de un campo de texto o los elementos de un formulario
+    // Una vez que se hace un cambio en el input, se llama a la función convertir
+    // this hace referencia a todo el elemento de tipo input
+    function convertir(nombreInput){
+      // Cuando se detecta el cambio en el input después de escribir el nombre => cambia todo a mayúsculas
+      nombreInput.value = nombreInput.value.toUpperCase();
+    }
+  </script>
+</body>
+</html>

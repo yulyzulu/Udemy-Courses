@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Eventos</title>
+</head>
+<body>
+  <h1 id="titulo">Manejo DOM con JavaScript</h1>
+  <br/>
+  <form id="formulario">
+    Nombre: <input type="text" id="nombre" />
+    <br /><br />
+    Apellido: <input type="text" id="apellido" />
+  </form>
+
+  <script>
+    // Delegación de evento o useCapture => nos permite propagar la información que ya hemos configurado en el elemento externo a los elementos internos.
+    // Simplificar el código=> Podemos aplicar los mismos estilos en un formulario a todos los elementos de tipo input
+    // Todos los elementos de tipo input deben estar dentro de un nform
+    // Para que se aplique lo que hemos configurado en el formulario se aplique en lo que hay adentro(inputs), debemos agregar un parámetro más.
+    // Al final del addEventListener vamos a agregar el parámetro de true. Básicamente dice que lo que hemos configurado se aplique también para elementos internos
+    const formulario = document.getElementById('formulario');
+    formulario.addEventListener('focus', (evento) => {
+      evento.target.style.background = 'pink';
+    }, true);
+    formulario.addEventListener('blur', (evento) => {
+      evento.target.style.background = 'white';
+    }, true);
+  </script>
+</body>
+</html>
